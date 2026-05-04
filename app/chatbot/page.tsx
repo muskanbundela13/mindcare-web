@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 
-const API = "http://localhost:4000";
+const API = "https://mindcare-app-nine.vercel.app";
 const SESSION = `session_${Math.random().toString(36).substr(2, 9)}`;
 
 export default function Chatbot() {

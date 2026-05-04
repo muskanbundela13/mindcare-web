@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 
-const API = "http://localhost:4000";
+const API = "https://mindcare-app-nine.vercel.app";
 
 export default function EducationHub() {
   const [conditions, setConditions] = useState<any[]>([]);

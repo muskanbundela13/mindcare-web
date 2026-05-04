@@ -4,7 +4,7 @@
 // File: app/wellness/page.tsx
 // ═══════════════════════════════════════════════
 import { useState } from "react";
-const API = "http://localhost:4000";
+const API = "https://mindcare-app-nine.vercel.app";
 const USER_ID = "user_demo_001";
 
 const MEDITATIONS = [
