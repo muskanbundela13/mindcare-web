@@ -31,18 +31,32 @@ export default function EducationHub() {
     { id: 3, q: "How much do you worry about things?", opts: ["Normal amount", "A little more than usual", "Quite a lot", "Constant, hard to control"] },
   ];
 
-  useEffect(() => {
-    Promise.all([
-      fetch(`${API}/api/conditions?search=${search}&lang=${lang}`).then(r => r.json()),
-      fetch(`${API}/api/myths`).then(r => r.json()),
-      fetch(`${API}/api/glossary`).then(r => r.json()),
-    ]).then(([c, m, g]) => {
-      setConditions(c.data || []);
-      setMyths(m.data || []);
-      setGlossary(g.data || []);
-      setLoading(false);
-    }).catch(() => setLoading(false));
-  }, [search, lang]);
+useEffect(() => {
+  Promise.all([
+    fetch(`${API}/api/conditions?search=${search}&lang=${lang}`).then(r => r.json()),
+    fetch(`${API}/api/myths`).then(r => r.json()),
+    fetch(`${API}/api/glossary`).then(r => r.json()),
+  ])
+  .then(([c, m, g]) => {
+
+    console.log("CONDITIONS:", c);
+    console.log("MYTHS:", m);
+    console.log("GLOSSARY:", g);
+
+    setConditions(c.data || []);
+    setMyths(m.data || []);
+    setGlossary(g.data || []);
+
+    setLoading(false);
+  })
+  .catch((err) => {
+
+    console.error("FETCH ERROR:", err);
+
+    setLoading(false);
+  });
+
+}, [search, lang]);
 
   function handleAnswer(answer: string) {
     const updated = { ...symptomAnswers, [symptomStep]: answer };
