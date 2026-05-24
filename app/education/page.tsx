@@ -33,7 +33,7 @@ export default function EducationHub() {
 
 useEffect(() => {
   Promise.all([
-    fetch(`${API}/api/conditions?search=${search}&lang=${lang}`).then(r => r.json()),
+    fetch(`${API}/api/conditions`).then(r => r.json()),
     fetch(`${API}/api/myths`).then(r => r.json()),
     fetch(`${API}/api/glossary`).then(r => r.json()),
   ])
