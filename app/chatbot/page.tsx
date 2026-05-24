@@ -16,7 +16,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 
-const API = "https://hackathonproject-production-a9d1.up.railway.app";
+const API = "https://mindcare-backend-8tzt.onrender.com";
 
 // ── TYPES ──────────────────────────────────────────────────────
 interface Message {
