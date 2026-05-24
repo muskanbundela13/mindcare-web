@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 
-const API = "https://mindcare-app-nine.vercel.app";
+const API = "https://mindcare-backend-8tzt.onrender.com";
 
 export default function EducationHub() {
   const [conditions, setConditions] = useState<any[]>([]);
