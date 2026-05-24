@@ -262,7 +262,7 @@ export default function Chatbot() {
       )}
 
       {/* ── DISCLAIMER ────────────────────────────────────── */}
-      <div style={{ background: "rgba(251,191,36,0.05)", borderBottom: "1px solid rgba(251,191,36,0.1)", padding: "7px 20px", fontSize: 11, color: "#92400E", flexShrink: 0, color: "#D97706" }}>
+      <div style={{ background: "rgba(251,191,36,0.05)", borderBottom: "1px solid rgba(251,191,36,0.1)", padding: "7px 20px", fontSize: 11, color: "#92400E", flexShrink: 0 }}>
         ⚠️ AI support only — not a substitute for professional care. In crisis? Call 112.
       </div>
 
