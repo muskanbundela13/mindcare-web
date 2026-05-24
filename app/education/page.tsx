@@ -102,8 +102,13 @@ const [loading, setLoading] = useState(false);
   return (
     
     <div style={{ fontFamily: "sans-serif", background: "#F7F5F0", minHeight: "100vh" }}>
-      <h1 style={{fontSize:"80px",color:"red"}}>NEW VERSION</h1>
-<       h1 style={{color:"red",fontSize:"60px"}}>MUSKAN TEST</h1>
+      <h1 style={{ fontSize: "80px", color: "red" }}>
+    NEW VERSION
+  </h1>
+
+  <h1 style={{ color: "blue", fontSize: "60px" }}>
+    MUSKAN TEST
+  </h1>
       {/* HERO */}
       <div style={{ background: "linear-gradient(135deg,#1A1A2E,#0F3460)", padding: "52px 40px", position: "relative", overflow: "hidden" }}>
         <h1 style={{ fontSize: 42, fontWeight: 800, color: "#fff", marginBottom: 12, lineHeight: 1.1 }}>
