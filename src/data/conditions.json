@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name_en": "Anxiety Disorder",
+    "name_hi": "चिंता विकार",
+    "description": "Persistent worry and fear."
+  },
+  {
+    "id": 2,
+    "name_en": "Depression",
+    "name_hi": "अवसाद",
+    "description": "Persistent sadness and loss of interest."
+  },
+  {
+    "id": 3,
+    "name_en": "Insomnia",
+    "name_hi": "अनिद्रा",
+    "description": "Difficulty sleeping."
+  }
+]
