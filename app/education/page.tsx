@@ -4,13 +4,22 @@ import { useState, useEffect } from "react";
 const API = "https://mindcare-backend-8tzt.onrender.com";
 
 export default function EducationHub() {
-  const [conditions, setConditions] = useState<any[]>([]);
+  const [conditions, setConditions] = useState<any[]>([
+  {
+    slug: "anxiety",
+    title: "Anxiety Disorder",
+    title_hi: "चिंता विकार",
+    description: "Persistent worry and fear.",
+    icon: "🧠",
+    color: "#3B82F6"
+  }
+]);
   const [myths, setMyths] = useState<any[]>([]);
   const [glossary, setGlossary] = useState<any[]>([]);
   const [tab, setTab] = useState("conditions");
   const [search, setSearch] = useState("");
   const [lang, setLang] = useState("en");
-  const [loading, setLoading] = useState(true);
+const [loading, setLoading] = useState(false);
   const [symptomStep, setSymptomStep] = useState(0);
   const [symptomAnswers, setSymptomAnswers] = useState<Record<number, string>>({});
   const [symptomResult, setSymptomResult] = useState<string | null>(null);
@@ -31,32 +40,32 @@ export default function EducationHub() {
     { id: 3, q: "How much do you worry about things?", opts: ["Normal amount", "A little more than usual", "Quite a lot", "Constant, hard to control"] },
   ];
 
-useEffect(() => {
-  Promise.all([
-    fetch(`${API}/api/conditions`).then(r => r.json()),
-    fetch(`${API}/api/myths`).then(r => r.json()),
-    fetch(`${API}/api/glossary`).then(r => r.json()),
-  ])
-  .then(([c, m, g]) => {
+// useEffect(() => {
+//   Promise.all([
+//     fetch(`${API}/api/conditions`).then(r => r.json()),
+//     fetch(`${API}/api/myths`).then(r => r.json()),
+//     fetch(`${API}/api/glossary`).then(r => r.json()),
+//   ])
+//   .then(([c, m, g]) => {
 
-    console.log("CONDITIONS:", c);
-    console.log("MYTHS:", m);
-    console.log("GLOSSARY:", g);
+//     console.log("CONDITIONS:", c);
+//     console.log("MYTHS:", m);
+//     console.log("GLOSSARY:", g);
 
-    setConditions(c.data || []);
-    setMyths(m.data || []);
-    setGlossary(g.data || []);
+//     setConditions(c.data || []);
+//     setMyths(m.data || []);
+//     setGlossary(g.data || []);
 
-    setLoading(false);
-  })
-  .catch((err) => {
+//     setLoading(false);
+//   })
+//   .catch((err) => {
 
-    console.error("FETCH ERROR:", err);
+//     console.error("FETCH ERROR:", err);
 
-    setLoading(false);
-  });
+//     setLoading(false);
+//   });
 
-}, [search, lang]);
+// }, [search, lang]);
 
   function handleAnswer(answer: string) {
     const updated = { ...symptomAnswers, [symptomStep]: answer };
@@ -88,9 +97,13 @@ useEffect(() => {
     fontFamily: "sans-serif",
   });
 
-  return (
-    <div style={{ fontFamily: "sans-serif", background: "#F7F5F0", minHeight: "100vh" }}>
+  
 
+  return (
+    
+    <div style={{ fontFamily: "sans-serif", background: "#F7F5F0", minHeight: "100vh" }}>
+      <h1 style={{fontSize:"80px",color:"red"}}>NEW VERSION</h1>
+<       h1 style={{color:"red",fontSize:"60px"}}>MUSKAN TEST</h1>
       {/* HERO */}
       <div style={{ background: "linear-gradient(135deg,#1A1A2E,#0F3460)", padding: "52px 40px", position: "relative", overflow: "hidden" }}>
         <h1 style={{ fontSize: 42, fontWeight: 800, color: "#fff", marginBottom: 12, lineHeight: 1.1 }}>
@@ -128,7 +141,7 @@ useEffect(() => {
         {loading && <p style={{ color: "#64748B" }}>Loading...</p>}
 
         {/* CONDITIONS */}
-        {!loading && tab === "conditions" && (
+        {(
           <>
             <h2 style={{ fontSize: 26, fontWeight: 700, marginBottom: 6 }}>Condition Library</h2>
             <p style={{ color: "#64748B", marginBottom: 28 }}>{conditions.length} conditions found</p>
