@@ -13,7 +13,7 @@ const MODULES = [
 
 export default function Home() {
   return (
-    <div style={{ fontFamily: "sans-serif", background: "#F7F5F0", minHeight: "100vh" }}>
+    <div style={{ fontFamily: "sans-serif", background: "#f2e5b3", minHeight: "100vh" }}>
       <div style={{ background: "linear-gradient(135deg,#1A1A2E,#0F3460)", padding: "60px 40px", color: "#fff" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 20 }}>
           <div style={{ width: 52, height: 52, borderRadius: 14, background: "linear-gradient(135deg,#3B6FE8,#7C3AED)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 28 }}>🧠</div>
