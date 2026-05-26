@@ -9,14 +9,14 @@ const MODULES = [
   { href: "/crisis", icon: "🆘", title: "Crisis Support", desc: "Emergency helplines and safety planning", color: "#DC2626" },
   { href: "/wellness", icon: "🌱", title: "Wellness Tools", desc: "Meditation, breathing, sleep & gratitude", color: "#D97706" },
   { href: "/community", icon: "💬", title: "Community", desc: "Peer support forums and shared experiences", color: "#7C3AED" },
-  { href: "/therapy-buddy", icon: "🧠", title: "Therapy Buddy", desc: "Personalised AI companion for structured CBT sessions & progress tracking", color: "#7C3AED" },
+  { href: "/therapy-buddy", icon: "🧠", title: "Therapy Buddy", desc: "Personalised AI companion for structured CBT sessions & progress tracking", color: "#230558" },
 ];
 
 
 
 export default function Home() {
   return (
-    <div style={{ fontFamily: "sans-serif", background: "#cde9fa", minHeight: "100vh" }}>
+    <div style={{ fontFamily: "sans-serif", background: "#6035e0", minHeight: "100vh" }}>
       <div style={{ background: "linear-gradient(135deg,#1A1A2E,#0F3460)", padding: "60px 40px", color: "#fff" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 20 }}>
           <div style={{ width: 52, height: 52, borderRadius: 14, background: "linear-gradient(135deg,#3B6FE8,#7C3AED)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 28 }}>🧠</div>
