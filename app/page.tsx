@@ -9,7 +9,10 @@ const MODULES = [
   { href: "/crisis", icon: "🆘", title: "Crisis Support", desc: "Emergency helplines and safety planning", color: "#DC2626" },
   { href: "/wellness", icon: "🌱", title: "Wellness Tools", desc: "Meditation, breathing, sleep & gratitude", color: "#D97706" },
   { href: "/community", icon: "💬", title: "Community", desc: "Peer support forums and shared experiences", color: "#7C3AED" },
+  { href: "/therapy-buddy", icon: "🧠", title: "Therapy Buddy", desc: "Personalised AI companion for structured CBT sessions & progress tracking", color: "#7C3AED" },
 ];
+
+
 
 export default function Home() {
   return (
