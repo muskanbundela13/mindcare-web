@@ -2,8 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 
-const API = "https://mindcare-backend-8tzt.onrender.com";
-
+const API = "";
 interface Message {
   role: "user" | "assistant";
   content: string;
